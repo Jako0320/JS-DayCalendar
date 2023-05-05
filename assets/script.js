@@ -5,8 +5,32 @@ $(document).ready(function () { //To have the whole html rendered first before r
     localStorage.setItem(time, text);
   });
 
+  function hourStatus() {
 
+    const current24Hour = dayjs().format('HH'); // Current hour in 24h format
 
+    $(".time-block").each(function () {
+      let blockHour = parseInt($(this).attr("id").split("hour-")[1]); // extract time block hour to compare with current hour
+
+      // compare and change class depending on current hour
+      if (blockHour < current24Hour) {
+        $(this).addClass("past");
+        $(this).removeClass("future");
+        $(this).removeClass("present");
+      }
+      else if (blockHour == current24Hour) {
+        $(this).removeClass("past");
+        $(this).addClass("present");
+        $(this).removeClass("future");
+      }
+      else {
+        $(this).removeClass("present");
+        $(this).removeClass("past");
+        $(this).addClass("future");
+      }
+    })
+  }
+  hourStatus();
 
   //add text from local storage if there is any
   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
@@ -18,17 +42,9 @@ $(document).ready(function () { //To have the whole html rendered first before r
   $("#hour-15 .description").val(localStorage.getItem("hour-15"));
   $("#hour-16 .description").val(localStorage.getItem("hour-16"));
   $("#hour-17 .description").val(localStorage.getItem("hour-17"));
-  
+
   //display current day and time
   $("#currentDay").text(dayjs().format("dddd, MMMM Do, YYYY"));
   $("#currentTime").text(dayjs().format("h:mm A"));
 
 })
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
-  //
-  // TODO: Add code to display the current date in the header of the page
