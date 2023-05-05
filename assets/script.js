@@ -20,7 +20,7 @@ $(document).ready(function () { //To have the whole html rendered first before r
   $("#hour-17 .description").val(localStorage.getItem("hour-17"));
   
   //display current day and time
-  $("#currentDay").text(dayjs().format("dddd, MMMM D, YYYY"));
+  $("#currentDay").text(dayjs().format("dddd, MMMM Do, YYYY"));
   $("#currentTime").text(dayjs().format("h:mm A"));
 
 })
@@ -31,3 +31,4 @@ $(document).ready(function () { //To have the whole html rendered first before r
   // current hour in 24-hour time?
   //
   //
+  // TODO: Add code to display the current date in the header of the page
