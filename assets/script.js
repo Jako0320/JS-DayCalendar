@@ -7,12 +7,11 @@ $(document).ready(function () { //To have the whole html rendered first before r
 
   function hourStatus() {
 
-    let current24Hour = parseInt(dayjs().format('HH')); // Current hour in 24h format
+    let current24Hour = parseInt(dayjs().format('HH')); // Current hour in 24h format, parsed into an integer
     
     $(".time-block").each(function () {
-      let blockHour = parseInt($(this).attr("id").split("hour-")[1]); // extract time block hour to compare with current hour
-console.log(current24Hour);
-console.log(blockHour);
+      let blockHour = parseInt($(this).attr("id").split("hour-")[1]); // extract time block hour to compare with current hour, as in integer
+
       // compare and change class depending on current hour
       if (blockHour < current24Hour) {
         $(this).addClass("past");
@@ -46,9 +45,10 @@ console.log(blockHour);
 
   //display current day and time
   $("#currentDay").text(dayjs().format("dddd, MMMM Do, YYYY"));
-  //$("#currentTime").text(dayjs().format("h:mm A")); Basic line for the time when the page load
 
-  function start () { // time that stays current on the page without reloading
+  //$("#currentTime").text(dayjs().format("h:mm A")); Basic line to display the time at the moment the page loads
+
+  function start () { // dynamic time display
     setInterval (function() {
         $("#currentTime").text(dayjs().format("h:mm A"));
     }, 1000)
