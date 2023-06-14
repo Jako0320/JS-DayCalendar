@@ -1,39 +1,36 @@
-# JS-DayCalendar
-Week 5 challenge, day calendar
-I used Jquery, Bootstrap and DayJS (and its advanced format) to build this.
 
-```md
-NEED:
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+# Day Calendar
 
-```md
-ACCEPTANCE CRITERIA:
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+## Description
+A simple calendar application that allows a user to save events for each hour of the day.<br>
 
-Here is a screenshot of the calendar.
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Testing](#testing)
+- [Questions](#questions)
+
+## Installation
+Simply run <a href="https://jako0320.github.io/JS-DayCalendar/">this link</a> in any browser.
+
+## Usage
 ![Calendar Screenshot](./assets/Screenshot.png)
 
-It can be found at this link:
-https://jako0320.github.io/JS-DayCalendar/
+## License
 
-Repo link:
-https://github.com/Jako0320/JS-DayCalendar
+  
+This application is not covered under any license. 
 
-I hit all the marks, I also went a bit beyond the ask, I added the ordinal characters to the date (using advanced formats from dayJS), I had dig a bit to figure out how to implement it in my script, more than I anticipated spending on it, but that's the way.
-I also added a dynamic time on the page below the date. I tried to figure out how to dynamically change the block status using that dynamic time, but couldn't figure it out.
+
+## Contributing
+Please use as you see fit, here is the <a href="https://github.com/Jako0320/JS-DayCalendar">GitHub repo</a>.
+
+## Testing
+N/A
+
+## Questions
+Please feel free to reach out for any questions:
+- GitHub: https://github.com/jako0320
+- Email: jacques.scoffoni@gmail.com
